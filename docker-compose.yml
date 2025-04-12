@@ -1,0 +1,38 @@
+services:
+  db:
+    image: postgres:latest
+    container_name: pg-dicoding 
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "${DB_PORT}:5432"
+
+  metabase:
+    image: metabase/metabase:v0.46.4
+    container_name: metabase-dicoding
+    restart: always
+    # environment:
+    #   MB_DB_TYPE: postgres
+    #   MB_DB_DBNAME: ${DB_NAME}
+    #   MB_DB_PORT: ${DB_PORT}
+    #   MB_DB_USER: ${DB_USER}
+    #   MB_DB_PASS: ${DB_PASSWORD}
+    #   MB_DB_HOST: ${DB_HOST}
+    #   MB_SETUP_ADMIN_EMAIL: ${MB_EMAIL}
+    #   MB_SETUP_ADMIN_PASSWORD: ${MB_PASSWORD}
+    #   MB_SETUP_ADMIN_FIRST_NAME: root
+    #   MB_SETUP_ADMIN_LAST_NAME: admin
+    #   MB_SETUP_SITE_NAME: metabase-dicoding
+    #   MB_SETUP_SKIP: true
+    ports:
+      - "${MB_PORT}:3000"
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
