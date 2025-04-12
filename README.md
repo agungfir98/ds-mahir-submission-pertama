@@ -19,7 +19,15 @@ Sumber data: [Dataset Jaya Jaya Maju](https://github.com/dicodingacademy/dicodin
 Setup environment:
 
 ```bash
+# clone this repo 
+git clone https://github.com/agungfir98/ds-mahir-submission-pertama.git dicoding-hr-problem-submission
+cd dicoding-hr-problem-submission
+```
 
+```bash
+# run setup.sh to setup postgresql and matebase with docker compose
+./setup.sh
+# this script copy example env, fetch dataset for submission, and start a docker compose
 ```
 
 ## Business Dashboard
