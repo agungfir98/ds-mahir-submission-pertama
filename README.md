@@ -18,17 +18,34 @@ Sumber data: [Dataset Jaya Jaya Maju](https://github.com/dicodingacademy/dicodin
 
 Setup environment:
 
+**Clone repo**
 ```bash
 # clone this repo 
 git clone https://github.com/agungfir98/ds-mahir-submission-pertama.git dicoding-hr-problem-submission
 cd dicoding-hr-problem-submission
 ```
+**Setup virtual Environtment (opsional)**
+```bash
+python -m venv ./venv
+```
 
+### setup
+**manual setup**
+```bash
+cp example.env .env
+pip install -r requirements.txt
+docker-compose up -d
+```
+**atau dengan menjalankan script berikut**
+mengotomasi proses setup hingga mengimport metabase instance
+> note disarankan untuk menyesuaikan example.env sesuai kebutuhan
 ```bash
 # run setup.sh to setup postgresql and matebase with docker compose
 ./setup.sh
 # this script copy example env, fetch dataset for submission, and start a docker compose
 ```
+> note:
+> setelah menjalankan `setup.sh` mungkin masih perlu untuk mengganti host name menjadi localhost pada metabase dikarenakan perbedaan konfigurasi network (saya menginstall docker didalam WSL (windows subsystem fo linux) yang memiliki konfigrasi network berbeda sehingga tidak dapat menggunakan localhost serperti biasanya)
 
 ## Business Dashboard
 
