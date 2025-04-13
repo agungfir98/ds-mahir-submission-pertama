@@ -1,5 +1,8 @@
 # Proyek Pertama: Menyelesaikan Permasalahan Human Resource Perusahaan Jaya Jaya Maju
 
+> ⚠️ Peringatan 
+> 
+> Skenario dalam proyek ini hanyalah fiktif belaka. Apabila terdapat kesamaan nama tokoh, perusahaan, ataupun produk, itu adalah kebetulan semata dan tidak ada unsur kesengajaan.
 ## Business Understanding
 Jaya Jaya Maju merupakan salah satu perusahaan multinasional yang telah berdiri sejak tahun 2000. Ia memiliki lebih dari 1000 karyawan yang tersebar di seluruh penjuru negeri. 
 
